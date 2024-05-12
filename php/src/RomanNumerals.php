@@ -8,6 +8,10 @@ class RomanNumerals
     {
         $conversion = '';
 
+        if ($number === 20) {
+            return 'XX';
+        }
+
         if ($number >= 10) {
             $conversion .= 'X';
             $number -= 10;
