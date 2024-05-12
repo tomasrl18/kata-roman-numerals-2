@@ -111,4 +111,14 @@ class RomanNumeralsTest extends TestCase
 
         self::assertEquals('XVIII', $result);
     }
+
+    /** @test */
+    public function given_20_then_return_XX(): void
+    {
+        $xxx = new RomanNumerals();
+
+        $result = $xxx->convert(20);
+
+        self::assertEquals('XX', $result);
+    }
 }
