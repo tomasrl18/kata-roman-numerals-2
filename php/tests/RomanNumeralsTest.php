@@ -36,4 +36,19 @@ class RomanNumeralsTest extends TestCase
 
         self::assertEquals('III', $result);
     }
+
+    // En teoría tocaría el 4. Pero, como es una excepción, ya que en vez de
+    // añadir caracteres al final, los tenemos que añadir al principio.
+    // Por lo que no creo que mi algoritmo sea lo suficientemente maduro
+    // para trabajar con excepciones, no tengro un patrón todavía, necesito más información
+
+    /** @test */
+    public function given_5_then_return_V(): void
+    {
+        $xxx = new RomanNumerals();
+
+        $result = $xxx->convert(5);
+
+        self::assertEquals('V', $result);
+    }
 }
