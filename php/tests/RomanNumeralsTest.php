@@ -16,4 +16,14 @@ class RomanNumeralsTest extends TestCase
 
         self::assertEquals('I', $result);
     }
+
+    /** @test */
+    public function given_2_then_return_II(): void
+    {
+        $xxx = new RomanNumerals();
+
+        $result = $xxx->convert(2);
+
+        self::assertEquals('II', $result);
+    }
 }
