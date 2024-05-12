@@ -51,4 +51,14 @@ class RomanNumeralsTest extends TestCase
 
         self::assertEquals('V', $result);
     }
+
+    /** @test */
+    public function given_6_then_return_VI(): void
+    {
+        $xxx = new RomanNumerals();
+
+        $result = $xxx->convert(6);
+
+        self::assertEquals('VI', $result);
+    }
 }
