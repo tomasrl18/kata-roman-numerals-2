@@ -6,7 +6,15 @@ class RomanNumerals
 {
     public function convert(int $number): string
     {
-        if ($number === 3) {
+        $conversion = '';
+
+        for ($i = 0; $i < $number; $i++) {
+            $conversion .= 'I';
+        }
+
+        return $conversion;
+
+        /*if ($number === 3) {
             return 'III';
         }
 
@@ -14,6 +22,6 @@ class RomanNumerals
             return 'II';
         }
 
-        return 'I';
+        return 'I';*/
     }
 }
