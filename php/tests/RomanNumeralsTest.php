@@ -191,4 +191,64 @@ class RomanNumeralsTest extends TestCase
 
         self::assertEquals('LVIII', $result);
     }
+
+    /** @test */
+    public function given_4_then_return_IV(): void
+    {
+        $xxx = new RomanNumerals();
+
+        $result = $xxx->convert(4);
+
+        self::assertEquals('IV', $result);
+    }
+
+    /** @test */
+    public function given_9_then_return_IX(): void
+    {
+        $xxx = new RomanNumerals();
+
+        $result = $xxx->convert(9);
+
+        self::assertEquals('IX', $result);
+    }
+
+    /** @test */
+    public function given_29_then_return_XXIX(): void
+    {
+        $xxx = new RomanNumerals();
+
+        $result = $xxx->convert(29);
+
+        self::assertEquals('XXIX', $result);
+    }
+
+    /** @test */
+    public function given_80_then_return_LXXX(): void
+    {
+        $xxx = new RomanNumerals();
+
+        $result = $xxx->convert(80);
+
+        self::assertEquals('LXXX', $result);
+    }
+
+    /** @test */
+    public function given_294_then_return_CCXCIV(): void
+    {
+        $xxx = new RomanNumerals();
+
+        $result = $xxx->convert(294);
+
+        self::assertEquals('CCXCIV', $result);
+    }
+
+    /** @test */
+    public function given_2024_then_return_MMXXIV(): void
+    {
+        $xxx = new RomanNumerals();
+
+        $result = $xxx->convert(2024);
+
+        self::assertEquals('MMXXIV', $result);
+    }
 }
