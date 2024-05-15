@@ -181,4 +181,14 @@ class RomanNumeralsTest extends TestCase
 
         self::assertEquals('L', $result);
     }
+
+    /** @test */
+    public function given_58_then_return_LVIII(): void
+    {
+        $xxx = new RomanNumerals();
+
+        $result = $xxx->convert(58);
+
+        self::assertEquals('LVIII', $result);
+    }
 }
