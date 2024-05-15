@@ -8,28 +8,27 @@ class RomanNumerals
     {
         $conversion = '';
 
-        if ($number >= 50) {
-            $conversion .= 'L';
-            $number -= 50;
-        }
+        $romanNumerals = [
+            1000 => 'M',
+            900  => 'CM',
+            500  => 'D',
+            400  => 'CD',
+            100  => 'C',
+            90   => 'XC',
+            50   => 'L',
+            40   => 'XL',
+            10   => 'X',
+            9    => 'IX',
+            5    => 'V',
+            4    => 'IV',
+            1    => 'I'
+        ];
 
-        if ($number >= 20) {
-            $conversion .= 'XX';
-            $number -= 20;
-        }
-
-        if ($number >= 10) {
-            $conversion .= 'X';
-            $number -= 10;
-        }
-
-        if ($number >= 5) {
-            $conversion .= 'V';
-            $number -= 5;
-        }
-
-        for ($i = 0; $i < $number; $i++) {
-            $conversion .= 'I';
+        foreach ($romanNumerals as $value => $roman) {
+            while ($number >= $value) {
+                $conversion .= $roman;
+                $number -= $value;
+            }
         }
 
         return $conversion;
